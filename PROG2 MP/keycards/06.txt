@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 R
 
 I B R I I
@@ -5,3 +6,12 @@ R B R R I
 B I B B R
 R B R B R
 I A R B I
+=======
+R
+
+I B R I I
+R B R R I
+B I B B R
+R B R B R
+I A R B I
+>>>>>>> 97eb56f353ee26a616327fd05c3c41000ae5bc0f
