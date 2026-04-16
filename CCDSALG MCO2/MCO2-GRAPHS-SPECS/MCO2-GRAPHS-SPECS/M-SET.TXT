@@ -1,0 +1,2 @@
+V(M)={Barry,Bruce,Clark,Diana,Hal}
+E(M)={(Barry,Bruce),(Barry,Diana),(Bruce,Diana),(Clark,Diana),(Clark,Hal),(Diana,Hal)}

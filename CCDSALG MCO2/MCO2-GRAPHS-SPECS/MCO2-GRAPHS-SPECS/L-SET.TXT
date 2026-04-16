@@ -1,0 +1,2 @@
+V(L)={A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T}
+E(L)={(A,B),(A,E),(A,H),(B,C),(B,F),(C,D),(C,G),(D,E),(D,H),(E,G),(E,I),(F,J),(F,K),(G,H),(G,L),(H,M),(I,N),(J,O),(K,L),(K,P),(L,M),(M,N),(M,Q),(N,R),(O,P),(O,S),(P,T),(Q,R),(R,S),(S,T)}

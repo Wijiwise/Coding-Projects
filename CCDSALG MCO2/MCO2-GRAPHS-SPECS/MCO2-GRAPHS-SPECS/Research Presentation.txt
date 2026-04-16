@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Philippine Crop Yields in the Rainy Season</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+                max-height: 350px;
+            }
+        }
+        .energetic-blue { color: #00A6ED; }
+        .energetic-green { color: #7FB800; }
+        .energetic-yellow { color: #FFB400; }
+        .energetic-red { color: #F6511D; }
+        .bg-energetic-blue { background-color: #00A6ED; }
+        .bg-energetic-green { background-color: #7FB800; }
+        .bg-energetic-yellow { background-color: #FFB400; }
+        .bg-energetic-red { background-color: #F6511D; }
+        .border-energetic-blue { border-color: #00A6ED; }
+        .text-dark-primary { color: #2A2B2A; }
+    </style>
+</head>
+<body class="text-dark-primary">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black energetic-blue mb-4">The Paradox of the Philippine Rainy Season</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto">While essential for agriculture, the rainy season brings typhoons and extreme weather, posing a significant threat to crop yields and the nation's food security. This infographic explores the data-driven methods that build resilience.</p>
+        </header>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">A Double-Edged Sword: The Economic Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-6xl font-black energetic-green mb-2">10%</p>
+                    <p class="text-lg">Contribution of agriculture, forestry, and fishing to the national GDP.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-6xl font-black energetic-red mb-2">₱6.2B</p>
+                    <p class="text-lg">Agricultural damages from a single major typhoon (Typhoon Kristine).</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="text-6xl font-black energetic-yellow mb-2">₱15.3B</p>
+                    <p class="text-lg">Estimated losses in a single year from the combined effects of El Niño and La Niña.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Rice: The Nation's Staple Under Pressure</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-center">The Production & Import Dilemma</h3>
+                    <p class="mb-4 text-center">Despite being the 8th largest rice producer globally, the Philippines is consistently one of the world's top importers to meet national demand.</p>
+                    <div class="chart-container h-64 max-h-64">
+                        <canvas id="riceProductionChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-center">The Power of Genetics</h3>
+                    <p class="mb-4 text-center">Climate-resilient varieties show significant yield advantages over conventional ones, especially under stress like flooding.</p>
+                    <div class="chart-container">
+                        <canvas id="riceVarietyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Proven Methods for Boosting Rice Yields</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4">Smarter Water Management</h3>
+                    <p class="mb-4 flex-grow">Alternate Wetting and Drying (AWD) proves that less can be more, improving yields while saving vast amounts of water compared to continuous flooding.</p>
+                    <div class="mt-auto">
+                        <div class="flex justify-around text-center">
+                            <div>
+                                <p class="text-4xl font-black energetic-green">+6%</p>
+                                <p>Yield Increase</p>
+                            </div>
+                            <div>
+                                <p class="text-4xl font-black energetic-blue">-37%</p>
+                                <p>Water Saved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4">Balanced Nutrient Application</h3>
+                    <p class="mb-4 flex-grow">While nitrogen is vital, excessive use (>90 kg/ha) during the wet season increases the risk of lodging (plants falling over), which can devastate yields.</p>
+                     <div class="mt-auto text-center">
+                        <p class="text-lg">Finding the sweet spot between 60-90 kg/ha of Nitrogen is key for maximizing growth without compromising structural integrity.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md lg:col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Integrated Pest Management (IPM)</h3>
+                    <p class="mb-4">IPM strategies, focusing on resistant varieties and cultural practices, significantly outperform non-IPM methods in yield.</p>
+                    <div class="chart-container h-56 max-h-56">
+                        <canvas id="ipmChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Sugarcane: Sweet Crop, Bitter Challenges</h2>
+             <p class="text-lg md:text-xl max-w-3xl mx-auto text-center mb-8">Valued at over ₱76 billion annually, the sugarcane industry's biggest rainy season threat is lodging, which causes catastrophic yield loss.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-center">The Devastating Impact of Lodging</h3>
+                    <p class="mb-4 text-center">When sugarcane plants fall over due to wet soil and wind, the impact on yield is severe, especially in ratoon (regrowth) crops.</p>
+                    <div class="chart-container">
+                        <canvas id="lodgingChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                     <h3 class="text-2xl font-bold mb-4 text-center">Resilience Through Management</h3>
+                    <p class="mb-4 text-center">Strategic practices like mulching show compounding benefits over time, protecting soil and boosting yield in successive harvests.</p>
+                    <div class="chart-container">
+                        <canvas id="mulchingChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">An Integrated Framework for Resilience</h2>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-center mb-8">No single method is a silver bullet. True resilience comes from combining multiple data-driven strategies tailored to specific crops and conditions.</p>
+            <div class="w-full p-6 bg-white rounded-lg shadow-md">
+                <div class="flex flex-col md:flex-row justify-center items-center md:items-start space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="flex flex-col space-y-4 w-full md:w-1/3">
+                        <div class="border-2 border-energetic-blue p-4 rounded-lg text-center">
+                            <h4 class="font-bold text-lg">Varietal Selection</h4>
+                            <p>Climate-resilient & lodging-resistant crops</p>
+                        </div>
+                        <div class="border-2 border-energetic-green p-4 rounded-lg text-center">
+                            <h4 class="font-bold text-lg">Water & Soil Management</h4>
+                            <p>AWD, drainage, mulching, deep trenching</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center h-full text-4xl energetic-red font-bold transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="border-4 border-energetic-red p-6 rounded-full flex items-center justify-center w-48 h-48 text-center">
+                        <h4 class="font-black text-xl">Integrated Agricultural Practices</h4>
+                    </div>
+                    <div class="flex items-center justify-center h-full text-4xl energetic-red font-bold transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="flex flex-col space-y-4 w-full md:w-1/3">
+                        <div class="border-2 border-energetic-yellow p-4 rounded-lg text-center">
+                            <h4 class="font-bold text-lg">Nutrient & Pest Control</h4>
+                            <p>Balanced fertilization & Integrated Pest Management (IPM)</p>
+                        </div>
+                        <div class="bg-energetic-blue text-white p-4 rounded-lg text-center">
+                            <h4 class="font-black text-lg">Enhanced Yield & Food Security</h4>
+                            <p>The ultimate goal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const wrapLabel = (str, maxLen) => {
+            if (str.length <= maxLen) {
+                return str;
+            }
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLen) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const chartTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const energeticPalette = {
+            blue: '#00A6ED',
+            green: '#7FB800',
+            yellow: '#FFB400',
+            red: '#F6511D',
+            dark: '#2A2B2A'
+        };
+
+        const riceProductionCtx = document.getElementById('riceProductionChart').getContext('2d');
+        new Chart(riceProductionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Domestic Production', 'Imported to Meet Demand'],
+                datasets: [{
+                    data: [19.96, 3.17],
+                    backgroundColor: [energeticPalette.green, energeticPalette.red],
+                    borderColor: '#F8F9FA',
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: chartTooltipOptions.plugins.tooltip
+                }
+            }
+        });
+
+        const riceVarietyCtx = document.getElementById('riceVarietyChart').getContext('2d');
+        new Chart(riceVarietyCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Conventional Variety (Flooded)', wrapLabel('IR64-Sub1 (Flooded)', 16)],
+                datasets: [{
+                    label: 'Yield (t/ha)',
+                    data: [1.5, 4.0],
+                    backgroundColor: [energeticPalette.red, energeticPalette.green],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Yield (tons per hectare)' }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: chartTooltipOptions.plugins.tooltip
+                }
+            }
+        });
+        
+        const ipmCtx = document.getElementById('ipmChart').getContext('2d');
+        new Chart(ipmCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Non-IPM', 'IPM'],
+                datasets: [{
+                    label: 'Yield (t/ha)',
+                    data: [6.65, 7.4],
+                    backgroundColor: [energeticPalette.red, energeticPalette.green],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                 scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Yield (t/ha)' }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: chartTooltipOptions.plugins.tooltip
+                }
+            }
+        });
+
+        const lodgingCtx = document.getElementById('lodgingChart').getContext('2d');
+        new Chart(lodgingCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Plant Cane', 'Ratoon Cane'],
+                datasets: [
+                    {
+                        label: 'Cane Tonnage Loss',
+                        data: [12, 38],
+                        backgroundColor: energeticPalette.yellow,
+                    },
+                    {
+                        label: 'Sugar Yield Loss',
+                        data: [19, 47],
+                        backgroundColor: energeticPalette.red,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Yield Loss (%)' }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: chartTooltipOptions.plugins.tooltip
+                }
+            }
+        });
+
+        const mulchingCtx = document.getElementById('mulchingChart').getContext('2d');
+        new Chart(mulchingCtx, {
+            type: 'line',
+            data: {
+                labels: ['Plant Cane', '1st Ratoon', '2nd Ratoon'],
+                datasets: [{
+                    label: 'Yield Increase from Mulching',
+                    data: [6.3, 20, 30],
+                    borderColor: energeticPalette.green,
+                    backgroundColor: 'rgba(127, 184, 0, 0.2)',
+                    fill: true,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Yield Increase (%)' }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: chartTooltipOptions.plugins.tooltip
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+        Alex	Ben	Cara	Dana	Elio	Fiona	George	Hannah	Ivy	Jack	
+Alex	0	1	1	0	0	0	0	0	0	0
+Ben	1	0	0	1	1	0	0	0	0	0
+Cara	1	0	0	0	0	1	0	0	0	0
+Dana	0	1	0	0	1	0	0	0	0	0
+Elio	0	1	0	1	0	0	1	0	0	0
+Fiona	0	0	1	0	0	0	0	1	0	0
+George	0	0	0	0	1	0	0	0	1	1
+Hannah	0	0	0	0	0	1	0	0	1	0
+Ivy	0	0	0	0	0	0	1	1	0	1
+Jack	0	0	0	0	0	0	1	0	1	0

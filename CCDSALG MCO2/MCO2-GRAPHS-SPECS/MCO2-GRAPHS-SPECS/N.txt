@@ -1,0 +1,11 @@
+10
+Alex Ben Cara -1
+Ben Alex Dana Elio -1
+Cara Alex Fiona -1
+Dana Ben Elio -1
+Elio Dana Ben George -1
+Fiona Cara Hannah -1
+George Elio Ivy Jack -1
+Hannah Fiona Ivy -1
+Ivy Hannah George Jack -1
+Jack Ivy George -1

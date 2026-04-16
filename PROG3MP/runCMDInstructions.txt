@@ -1,0 +1,7 @@
+1.    set PATH_TO_FX="C:\Users\Acer\Desktop\MCOs\PROG3MP\javafx-sdk-25.0.1\lib" 
+
+2.    dir /s /b src\*.java > sources.txt
+
+3.    javac @sources.txt -d bin --module-path %PATH_TO_FX% --add-modules javafx.controls,javafx.fxml
+
+4.    java -cp bin;resources --module-path %PATH_TO_FX% --add-modules javafx.controls,javafx.fxml Control.Main

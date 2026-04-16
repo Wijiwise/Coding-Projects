@@ -1,0 +1,7 @@
+# Ignore Java classes
+classes/
+*.class	
+
+# Ignore OS cruft
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+15
+20
+XXXXXXXXXXXXXXXXXXXX
+X H  ## X  E   ##  X
+X #   #X ####      X
+X # P  X  #   E    X
+X ###  X###        X
+X   L XX###        X
+X  #  XXX#####     X
+X  E  X##    S     X
+X #### X      #    X
+X  T   X   E       X
+X ######X     E    X
+X     # X          X
+X   E   X          X
+X                  X
+XXXXXXXXXXXXXXXXXXXX

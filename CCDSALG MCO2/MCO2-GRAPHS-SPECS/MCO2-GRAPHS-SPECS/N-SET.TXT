@@ -1,0 +1,2 @@
+V(N)={Alex,Ben,Cara,Dana,Elio,Fiona,George,Hannah,Ivy,Jack}
+E(N)={(Alex,Ben),(Alex,Cara),(Ben,Dana),(Ben,Elio),(Cara,Fiona),(Dana,Elio),(Elio,George),(Fiona,Hannah),(George,Ivy),(George,Jack),(Hannah,Ivy),(Ivy,Jack)}

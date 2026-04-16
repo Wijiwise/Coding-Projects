@@ -1,0 +1,21 @@
+20
+A B E H -1
+B A C F -1
+C B G D -1
+D C H E -1
+E A D G I -1
+F B J K -1
+G C E H L -1
+H A D G M -1
+I E N -1
+J F O -1
+K F L P -1
+L G K M -1
+M H L N Q -1
+N I M R -1
+O J P S -1
+P K O T -1
+Q M R -1
+R N Q S -1
+S O R T -1
+T P S -1
